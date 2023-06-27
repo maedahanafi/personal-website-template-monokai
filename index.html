@@ -1,0 +1,45 @@
+
+<html >
+<head>
+
+	<title> Add a title here! </title>
+
+	<link rel="stylesheet" type="text/css" href="css/jquery.jscrollpane.css" />
+	<link rel="stylesheet" type="text/css" href="css/sublime.monokai.css"/>
+
+	<!-- SPELLS -->
+	<script src='js/library/jquery-2.1.0.min.js'></script>
+
+	<!-- Main controller files -->
+    <script src='js/controller/page_controller.js'></script>
+</head>
+
+
+<script>
+$(document).ready(function(){
+    setPage("partial/cv.html",2);
+});
+
+</script>
+<body >
+
+	<div class="header">
+        <div class="name">Your name here</div>
+		<div class="tabbed">
+			<p class="content-text">NYC, USA // San Jose, USA</p>
+			<p class="content-text">your.email@email.com</p>
+			<p class="content-text"><a href="https://github.com/theTrueCaptian/">My Github</a> // <a href="https://maeda-han.medium.com/">My Medium Articles</a></p>
+
+		</div>
+	</div>
+    <div class="nav">
+		<div class="button" onclick="setPage('partial/aboutme.html',1)">About Me</div>
+		<div class="button" onclick="setPage('partial/cv.html',2)">CV</div>
+
+	</div>
+	<div id="dynamic-content" class="main"></div>
+
+   
+
+</body>
+</html>

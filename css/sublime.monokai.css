@@ -1,0 +1,463 @@
+@font-face {
+  font-family: IBMPlexMono;
+  src: url(./IBMPlexMono-Regular.ttf);
+}
+@font-face {
+  font-family: IBMPlexMonoBold;
+  src: url(./IBMPlexMono-SemiBold.ttf);
+}
+
+html{
+  font-family: IBMPlexMono;
+  color: #ffffff;
+}
+body {
+  display: grid;
+  height: 100%;
+  /*overflow: hidden;*/
+  grid-template-columns: minmax(5%,30px) minmax(500px, auto) 5%;
+  grid-template-rows: max-content minmax(35px,max-content) auto;
+  grid-template-areas:
+    ". header ."
+    ". nav ."
+    ". main .";
+
+  font-size: 1.2rem;
+  line-height:2rem;
+  background-color:#232420 ;
+  font-family: IBMPlexMono;
+  padding: 2rem 0.75rem 0.75rem;
+}
+body>.header,
+body>.main{
+  width: 95%;
+}
+body>.nav{
+  width: 100%;
+}
+body>.header{
+	grid-area: header;
+	padding: 5px 15px;
+
+}
+body>.header .name{
+  font-size: 3rem;
+  line-height: 4rem;
+  font-family: IBMPlexMonoBold;
+  /*font-weight: 700;*/
+  /*margin-top: 1em;*/
+  color: #eb296c;
+}
+
+body>.nav{
+	grid-area: nav;
+  margin: 2rem 0rem;
+
+  border-bottom: 1px solid #a9aaa5;
+
+  display: flex;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #a9aaa5;
+  height: fit-content;
+
+}
+
+body>.main{
+	grid-area: main;
+	margin: 4rem 2rem 2rem 0rem;
+
+  font-size: 1.2rem;
+
+}
+
+.resume-row .resume-col-header{
+	font-family: inherit;
+  line-height: 2.5rem;
+  font-size: 2rem;
+  color: #eb296c;
+}
+
+
+
+h4{
+	margin-top:0px;
+}
+/* Allow for properly indented content in lists. */
+ol{
+	list-style: disc outside none;
+	padding-left:20px;
+}
+p{
+	margin:0px;
+	color: #ffffff;
+	padding: 0.25rem 0.125rem 0.125rem
+}
+.page{
+	width:70%;
+	margin:auto;
+}
+/*************** Buttons ******************************************************************/
+
+.button{
+  padding: 0rem 0.75rem;
+  height:fit-content;
+  width: fit-content;
+  background-color:#2f302b;
+}
+.clicked, .button:hover {
+  border-bottom: 0.1rem solid #a9aaa5;
+  cursor: pointer;
+}
+/*********************************************************************************/
+
+.resume-row{
+  width:100%;
+  padding: 2rem 0.75rem 0.75rem;
+
+  display: grid;
+  grid-template-rows : auto auto;
+  grid-template-columns: auto;
+  grid-template-areas:
+      "resume-col-header"
+      "resume-col-content";
+
+  border-top: 1px solid #a9aaa5;
+}
+.resume-row .resume-col-header{
+	line-height: 2.5rem;
+  font-size: 2rem;
+  font-family: IBMPlexMonoBold;
+
+}
+.resume-row .resume-col-content{
+  padding-left: 1.5rem;
+}
+
+
+.resume-button{
+	float:right;
+	background-color: #3c3c3c;
+    border: none;
+    color: white;
+    height: 40px;
+    padding: 10px;
+}
+.thumbnail{
+	border: none;
+}
+/***********************************************************************************************************************************/
+/* content- --> this means its a project, presentation, paper, item, etc.*/
+.content-box{
+	/*
+		a box contains
+		Thumbnail (code,report,links) 	--- header  --  date
+										--- location
+										--- description
+	*/
+	display: grid;
+	grid-gap: 0px 0.25rem;
+
+	grid-template-columns: 20% 60% 20%;
+	grid-template-rows: auto auto auto auto;
+	grid-template-areas:
+		"header header date"
+		"thumbnail location location"
+		"thumbnail description description"
+		"thumbnail links links"
+	;
+}
+/* content-text-box --> same as above just without thumbnail */
+.content-text-box{
+	/*
+		a content-text-box contains
+		header  --  date
+		location
+		description
+		links
+	*/
+	display: grid;
+	/*grid-gap: 0.75rem;*/
+
+  grid-template-columns: 60% 40%;
+  grid-template-rows: auto auto auto auto;
+	grid-template-areas:
+		"header date"
+		"location location"
+		"description description"
+		"links links"
+	;
+}
+.content-box,
+.content-text-box{
+	padding: 2rem 0.75rem 0.75rem;
+}
+.content-box .header,
+.content-text-box .header{
+	color:#a3d83e;
+	font-size: 1.5rem;
+  line-height: 2.2rem;
+}
+.content-box .location,
+.content-text-box .location{
+	color:#e2da78;
+	font-size: 1.2rem
+}
+.content-box .date, .content-box .thumbnail,
+.content-text-box .date{
+	color:#a486df;
+	font-size: 1.2rem
+}
+.content-box .description, .content-text-box .description{
+  color:#ffffff;
+}
+.content-box .links, .content-text-box .links{
+  color:#64d6ee;
+}
+.content-box .header,
+.content-text-box .header{
+  	grid-area: header;
+}
+.content-box .date,
+.content-text-box .date{
+	grid-area: date;
+	text-align: right;
+}
+.content-box .location,
+.content-text-box .location{
+	grid-area: location;
+}
+.content-box .thumbnail{
+	grid-area: thumbnail;
+}
+.content-box .thumbnail img{
+	border: 1pt gray solid;
+    border-radius: 0.5pt;
+}
+.content-box .description,
+.content-text-box .description{
+	grid-area: description;
+}
+.content-box .links,
+.content-text-box .links{
+	grid-area: links;
+}
+
+/***********************************************************************************************************************************/
+/* list --> this contains a compact ist of list-items and publication-items
+   list-items contains
+   	- a header within the item with darker font
+   	- a description with gray font
+   	- date
+   	- location
+   	- links
+
+   publication-items contains
+    - a header within the item with darker font
+	- title with gray font
+    - date
+    - location
+    - links
+
+*/
+.list{
+	display: grid;
+	grid-template-columns: 100%;
+	grid-auto-flow: row;
+	/*padding-bottom: 15px;*/
+	font-size: 1.2rem
+}
+.list .list-item{
+
+}
+.list .publication-item{
+
+}
+
+.tabbed{
+	/*padding-top: 7px;*/
+	padding-left: 1.5rem;
+}
+.list .list-item,
+.list .publication-item{
+	padding: 2rem 0.75rem 0.75rem;
+}
+.list-item .header,
+.publication-item .header{
+	color:#a3d83e;
+	font-size: 1.2rem
+}
+.list-item .title{
+  color: #a3d83e;
+}
+.publication-item .title{
+  color: #e2da78;
+}
+.list-item .description{
+  color:#ffffff;
+}
+.list-item .description{
+	grid-area: description;
+}
+.list-item .date,
+.publication-item .date{
+	grid-area: date;
+}
+.list-item .location,
+.publication-item .location{
+	grid-area: location;
+}
+.list-item .location, .publication-item .location{
+  color: #ffffff;
+}
+.list-item .date, .publication-item .date{
+	color:#ffffff;
+}
+.list-item .links,
+.publication-item .links{
+	grid-area: links;
+}
+
+a{
+	color:#64d6ee;
+	font-weight:normal;
+	text-decoration: underline;
+}
+/***********************************************************************************************************************************/
+/* gallery --> contains art-item
+   art-item contains
+   - header
+   - image
+   - link
+*/
+.gallery{
+	display: grid;
+	grid-template-columns: 33% 33% 33%;
+	/*padding-bottom: 15px;*/
+	font-size: 1.2rem
+}
+.gallery .art-item{
+	padding: 2rem 0.75rem 0.75rem;
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: 50% 50%;
+}
+.art-item .header,.art-item .links{
+	font-size: 1.2rem
+	margin: auto;
+	opacity: 0;
+	color:black;
+	z-index: 100;
+}
+.art-item .header{
+	grid-row: 1 / span 1;
+	grid-column: 1;
+}
+.art-item .links{
+	grid-row-start: 2;
+	grid-column: 1;
+}
+.art-item .thumbnail{
+	grid-row-start: 1;
+	grid-column: 1;
+}
+
+.art-item:hover{
+	background: lightgray;
+}
+.art-item:hover .header, .art-item:hover .links{
+	opacity: 100;
+	color:black;
+	z-index: 100;
+}
+.art-item:hover .thumbnail{
+	background: lightgray;
+	opacity: 0.2;
+}
+
+/*********************************************************************************/
+@media only screen and (max-device-width: 768px) {
+  /* For mobile phones: */
+  .profile-box .thumbnail img{
+    height: 200px;
+  }
+  .projects-gallery{
+    grid-template-columns: 100%;
+  }
+  .content-box{
+    /*grid-column-gap: 1em;
+    margin-right: 0.5em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: 1.5em;*/
+  }
+  .content-text-box{
+    width:100%;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas:
+        "header"
+        "location"
+        "date"
+        "description"
+        "links"
+    ;
+  }
+  .content-text-box .date{
+    grid-area:date;
+    text-align:left;
+  }
+
+  html{
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+  body{
+    display: grid;
+    grid-template-columns: 5% 90% 5%;
+    grid-template-rows: max-content max-content auto;
+  }
+  body>.header,
+  body>.nav,
+  body>.main{
+    width: 100%;
+    padding:0rem;
+    margin: 1rem 0rem;
+  }
+  body>.header{
+    /*font-size: 1.2em;
+    padding: 1em 1em;*/
+  }
+  body>.header .name{
+    /*font-size: 3rem;
+    line-height: 4rem;
+    margin-top: 0em;*/
+  }
+  body>.nav{
+  }
+  body,
+  .content-box .header,
+  .content-text-box .header {
+  }
+  .resume-row .resume-col-header{
+    /*line-height: 2.5rem;
+    font-size: 2rem;
+    padding-bottom: 1em;*/
+  }
+  .resume-row{
+      /*padding: 2rem 0.75rem 0.75rem;*/
+  }
+  body>.main,
+  .resume-row,
+  .content-box,
+  .list-item .header,
+  .publication-item .header{
+    /*font-size: 1.2em;*/
+  }
+
+  .list .list-item,
+  .list .publication-item {
+    /*padding-bottom: 1em;*/
+  }
+
+}
