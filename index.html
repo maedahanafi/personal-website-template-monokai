@@ -17,11 +17,15 @@
 
 <script>
 $(document).ready(function(){
-    setPage("partial/cv.html",2);
+    setPage("partial/cv.html",1);
 });
 
 </script>
 <body >
+	<div class="nav">
+		<div class="button" onclick="setPage('partial/aboutme.html',0)">About Me</div>
+		<div class="button" onclick="setPage('partial/cv.html',1)">CV</div>
+	</div>
 
 	<div class="header">
         <div class="name">Your name here</div>
@@ -32,12 +36,7 @@ $(document).ready(function(){
 
 		</div>
 	</div>
-    <div class="nav">
-		<div class="button" onclick="setPage('partial/aboutme.html',1)">About Me</div>
-		<div class="button" onclick="setPage('partial/cv.html',2)">CV</div>
-
-	</div>
-	<div id="dynamic-content" class="main"></div>
+    <div id="dynamic-content" class="main"></div>
 
    
 
