@@ -22,8 +22,8 @@ body {
     ". header ."
     ". main .";
 
-  font-size: 1.2rem;
-  line-height:2rem;
+  font-size: 1rem;
+  line-height:1.5rem;
   background-color: #2f302b;
   font-family: IBMPlexMono;
 }
@@ -40,8 +40,8 @@ body>.header{
 
 }
 body>.header .name{
-  font-size: 3rem;
-  line-height: 4rem;
+  font-size: 2rem;
+  line-height: 3rem;
   font-family: IBMPlexMonoBold;
   /*font-weight: 700;*/
   /*margin-top: 1em;*/
@@ -70,7 +70,6 @@ body>.nav{
 body>.main{
 	grid-area: main;
 
-  font-size: 1.2rem;
 
 }
 
@@ -139,8 +138,8 @@ p{
   border-radius: 1rem;
 }
 .resume-row .resume-col-header{
-	line-height: 2.5rem;
-  font-size: 2rem;
+	line-height: 2rem;
+  font-size: 1.5rem;
   font-family: IBMPlexMonoBold;
 
 }
@@ -208,18 +207,18 @@ p{
 .content-box .header,
 .content-text-box .header{
 	color:#a3d83e;
-	font-size: 1.5rem;
-  line-height: 2.2rem;
+	font-size: 1rem;
+  line-height: 1.2rem;
 }
 .content-box .location,
 .content-text-box .location{
 	color:#e2da78;
-	font-size: 1.2rem
+	font-size: 1rem
 }
 .content-box .date, .content-box .thumbnail,
 .content-text-box .date{
 	color:#a486df;
-	font-size: 1.2rem
+	font-size: 1rem
 }
 .content-box .description, .content-text-box .description{
   color:#ffffff;
@@ -278,7 +277,7 @@ p{
 	grid-template-columns: 100%;
 	grid-auto-flow: row;
 	/*padding-bottom: 15px;*/
-	font-size: 1.2rem
+	font-size: 1rem
 }
 .list .list-item{
 
@@ -298,7 +297,7 @@ p{
 .list-item .header,
 .publication-item .header{
 	color:#a3d83e;
-	font-size: 1.2rem
+	font-size: 1rem
 }
 .list-item .title{
   color: #a3d83e;
@@ -347,7 +346,7 @@ a{
 	display: grid;
 	grid-template-columns: 33% 33% 33%;
 	/*padding-bottom: 15px;*/
-	font-size: 1.2rem
+	font-size: 1rem
 }
 .gallery .art-item{
 	padding: 2rem 0.75rem 0.75rem;
@@ -356,7 +355,7 @@ a{
 	grid-template-rows: 50% 50%;
 }
 .art-item .header,.art-item .links{
-	font-size: 1.2rem
+	font-size: 1rem
 	margin: auto;
 	opacity: 0;
 	color:black;
