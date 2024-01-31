@@ -22,8 +22,8 @@ body {
     ". header ."
     ". main .";
 
-  font-size: 1rem;
-  line-height:1.5rem;
+  font-size: 1em;
+  line-height:1.5em;
   background-color: #2f302b;
   font-family: IBMPlexMono;
 }
@@ -43,8 +43,6 @@ body>.header .name{
   font-size: 2rem;
   line-height: 3rem;
   font-family: IBMPlexMonoBold;
-  /*font-weight: 700;*/
-  /*margin-top: 1em;*/
   color: #eb296c;
 }
 
@@ -107,10 +105,13 @@ p{
 .location{
   color:#e2da78;
 }
+.paragraph{
+  padding: 1rem 0rem 1rem 0rem;
+}
 /*************** Buttons ******************************************************************/
 
 .button{
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 2rem;
   height:fit-content;
   width: fit-content;
   background-color:#2f302b;
@@ -478,13 +479,13 @@ a{
   }
 
   html{
-    font-size: 0.7rem;
-    line-height: 0.9rem;
+
   }
   body{
     display: grid;
+    row-gap: 2em;
     grid-template-columns: 1% 98% 1%;
-    grid-template-rows: minmax(4rem,max-content) max-content auto;
+    grid-template-rows: minmax(5rem,max-content) max-content auto;
     grid-template-areas:
       ". nav ."
       ". header ."
@@ -496,8 +497,8 @@ a{
   }
 
   .header > .tabbed > .content-text{
-    font-size: 0.7rem;
-    line-height: 0.7rem;
+    font-size: 1rem;
+    line-height: 1.2rem;
   }
 
   body>.header,
@@ -512,13 +513,14 @@ a{
   /* Sticky header */
   body>.nav{
     position: fixed;
-    top: -1;
+    top: 0;
     width: 100%;
   }
 
   body>.header{
     margin: 1rem 0rem 1rem 0rem;
   }
+
 
 }
 
@@ -541,4 +543,11 @@ a{
     margin: 1rem 0rem 1rem 0rem;
   }
 
+  .button{
+    padding: 1rem 2.5rem;
+  }
+  .clicked, .button:hover {
+    border-bottom: 0.5rem solid #a9aaa5;
+    cursor: pointer;
+  }
 }
