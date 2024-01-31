@@ -442,7 +442,7 @@ a{
     /*Sticky nav*/
     position: fixed;
     top: 0;
-    width: 100%
+    width: 100%;
 
     font-size: 3rem;
     line-height: 3.2rem;
@@ -492,7 +492,7 @@ a{
 
   }
   body .name {
-    padding-left: 1.5rem
+    padding-left: 1.5rem;
   }
 
   .header > .tabbed > .content-text{
@@ -513,7 +513,7 @@ a{
   body>.nav{
     position: fixed;
     top: -1;
-    width: 100%
+    width: 100%;
   }
 
   body>.header{
