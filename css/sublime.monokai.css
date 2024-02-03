@@ -40,20 +40,20 @@ body>.header{
 
 }
 body>.header .name{
-  font-size: 2rem;
-  line-height: 3rem;
+  font-size: 2em;
+  line-height: 3em;
   font-family: IBMPlexMonoBold;
   color: #eb296c;
 }
 
 body>.nav{
 	grid-area: nav;
-  margin: 0rem 0rem 0rem 0rem;
+  margin: 0em 0em 0em 0em;
 
   border-bottom: 1px solid #a9aaa5;
 
   display: flex;
-  font-size: 1.1rem;
+  font-size: 1.1em;
   font-weight: 500;
   color: #a9aaa5;
   height: fit-content;
@@ -73,8 +73,8 @@ body>.main{
 
 .resume-row .resume-col-header{
 	font-family: inherit;
-  line-height: 2.5rem;
-  font-size: 2rem;
+  line-height: 2.5em;
+  font-size: 2em;
   color: #eb296c;
 }
 
@@ -91,7 +91,7 @@ ol{
 p{
 	margin:0px;
 	color: #ffffff;
-	padding: 0.25rem 0.125rem 0.125rem
+	padding: 0.25em 0.125em 0.125em
 }
 .page{
 	width:70%;
@@ -106,26 +106,26 @@ p{
   color:#e2da78;
 }
 .paragraph{
-  padding: 1rem 0rem 1rem 0rem;
+  padding: 1em 0em 1em 0em;
 }
 /*************** Buttons ******************************************************************/
 
 .button{
-  padding: 0.5rem 2rem;
+  padding: 0.2em 2em;
   height:fit-content;
   width: fit-content;
   background-color:#2f302b;
 }
 .clicked, .button:hover {
-  border-bottom: 0.2rem solid #a9aaa5;
+  border-bottom: 0.2em solid #a9aaa5;
   cursor: pointer;
 }
 /*********************************************************************************/
 
 .resume-row{
   width:95%;
-  padding: 1rem;
-  margin: 2rem 0.75rem 0.75rem;
+  padding: 1em;
+  margin: 2em 0.75em 0.75em;
   display: grid;
   grid-template-rows : auto auto;
   grid-template-columns: auto;
@@ -135,12 +135,12 @@ p{
 
   /*border-top: 1px solid #a9aaa5;*/
   background-color: #232420;
-  border: 0.1rem solid #a9aaa5;
-  border-radius: 1rem;
+  border: 0.1em solid #a9aaa5;
+  border-radius: 1em;
 }
 .resume-row .resume-col-header{
-	line-height: 2rem;
-  font-size: 1.5rem;
+	line-height: 2em;
+  font-size: 1.5em;
   font-family: IBMPlexMonoBold;
 
 }
@@ -169,7 +169,7 @@ p{
 										--- description
 	*/
 	display: grid;
-	grid-gap: 0px 0.25rem;
+	grid-gap: 0px 0.25em;
 
 	grid-template-columns: 20% 60% 20%;
 	grid-template-rows: auto auto auto auto;
@@ -190,7 +190,7 @@ p{
 		links
 	*/
 	display: grid;
-	/*grid-gap: 0.75rem;*/
+	/*grid-gap: 0.75em;*/
 
   grid-template-columns: 60% 40%;
   grid-template-rows: auto auto auto auto;
@@ -203,23 +203,23 @@ p{
 }
 .content-box,
 .content-text-box{
-	padding: 2rem 0.75rem 0.75rem;
+	padding: 2em 0.75em 0.75em;
 }
 .content-box .header,
 .content-text-box .header{
 	color:#a3d83e;
-	font-size: 1rem;
-  line-height: 1.2rem;
+	font-size: 1em;
+  line-height: 1.2em;
 }
 .content-box .location,
 .content-text-box .location{
 	color:#e2da78;
-	font-size: 1rem
+	font-size: 1em
 }
 .content-box .date, .content-box .thumbnail,
 .content-text-box .date{
 	color:#a486df;
-	font-size: 1rem
+	font-size: 1em
 }
 .content-box .description, .content-text-box .description{
   color:#ffffff;
@@ -278,7 +278,7 @@ p{
 	grid-template-columns: 100%;
 	grid-auto-flow: row;
 	/*padding-bottom: 15px;*/
-	font-size: 1rem
+	font-size: 1em
 }
 .list .list-item{
 
@@ -289,16 +289,16 @@ p{
 
 .tabbed{
 	/*padding-top: 7px;*/
-	padding-left: 1.5rem;
+	padding-left: 1.5em;
 }
 .list .list-item,
 .list .publication-item{
-	padding: 2rem 0.75rem 0.75rem;
+	padding: 2em 0.75em 0.75em;
 }
 .list-item .header,
 .publication-item .header{
 	color:#a3d83e;
-	font-size: 1rem
+	font-size: 1em
 }
 .list-item .title{
   color: #a3d83e;
@@ -347,16 +347,16 @@ a{
 	display: grid;
 	grid-template-columns: 33% 33% 33%;
 	/*padding-bottom: 15px;*/
-	font-size: 1rem
+	font-size: 1em
 }
 .gallery .art-item{
-	padding: 2rem 0.75rem 0.75rem;
+	padding: 2em 0.75em 0.75em;
 	display: grid;
 	grid-template-columns: auto;
 	grid-template-rows: 50% 50%;
 }
 .art-item .header,.art-item .links{
-	font-size: 1rem
+	font-size: 1em
 	margin: auto;
 	opacity: 0;
 	color:black;
@@ -388,7 +388,7 @@ a{
 	opacity: 0.2;
 }
 
-/*********************************************************************************/
+/***************************************** Tablet Screen ****************************************/
 @media only screen and (max-device-width: 768px) {
   /* For mobile phones: */
   .profile-box .thumbnail img{
@@ -416,27 +416,26 @@ a{
   }
 
   html{
-    font-size: 0.8rem;
-    line-height: 1rem;
+    font-size: 1.2em;
+    line-height: 1.3em;
   }
   body{
     display: grid;
+    row-gap: 2em;
     grid-template-columns: 1% 98% 1%;
-    grid-template-rows: minmax(4rem,max-content) max-content auto;
+    grid-template-rows: auto auto auto;
     grid-template-areas:
       ". nav ."
       ". header ."
       ". main .";
-
 
   }
   body>.header,
   body>.nav,
   body>.main{
     width: 100%;
-   /* max-width: 700px;*/
-    padding:0rem;
-    margin: 0rem;
+    padding:0em;
+    margin: 0em;
   }
 
   body>.nav{
@@ -445,109 +444,59 @@ a{
     top: 0;
     width: 100%;
 
-    font-size: 3rem;
-    line-height: 3.2rem;
+    font-size: 1.5em;
+    line-height: 1.7em;
   }
+
+  /*.header > .tabbed > .content-text{
+    font-size: 1em;
+    line-height: 1.2em;
+  }*/
+
+  body>.header{
+    margin: 1em;
+  }
+
 
 }
 
-/*********************************************************************************/
-@media only screen and (max-device-width: 770px) {
-  /* For mobile phones: */
-  .profile-box .thumbnail img{
-    height: 200px;
-  }
-  .projects-gallery{
-    grid-template-columns: 100%;
-  }
+/***************************************** Phone Screen ****************************************/
 
-  .content-text-box{
-    width:100%;
-    grid-template-columns: 100%;
-    grid-template-rows: auto auto auto auto auto;
-    grid-template-areas:
-        "header"
-        "location"
-        "date"
-        "description"
-        "links"
-    ;
-  }
-  .content-text-box .date{
-    grid-area:date;
-    text-align:left;
-  }
-
+@media only screen and (max-device-width: 450px) {
   html{
-
+    font-size: 1.5em;
+    line-height: 1.7em;
   }
   body{
     display: grid;
     row-gap: 2em;
     grid-template-columns: 1% 98% 1%;
-    grid-template-rows: minmax(5rem,max-content) max-content auto;
+    grid-template-rows: auto auto auto;
     grid-template-areas:
       ". nav ."
       ". header ."
       ". main .";
 
   }
-  body .name {
-    padding-left: 1.5rem;
-  }
-
-  .header > .tabbed > .content-text{
-    font-size: 1rem;
-    line-height: 1.2rem;
-  }
 
   body>.header,
   body>.nav,
   body>.main{
-    width: 100%;
-    /*max-width: 700px;*/
-    padding:0rem;
-    margin: 0rem;
-  }
+    width: fit-content;
 
-  /* Sticky header */
-  body>.nav{
-    position: fixed;
-    top: 0;
-    width: 100%;
-  }
-
-  body>.header{
-    margin: 1rem 0rem 1rem 0rem;
-  }
-
-
-}
-
-@media only screen and (max-device-width: 380px) {
-  body>.header,
-  body>.nav,
-  body>.main{
-    width: 100%;
-    padding:0rem;
-    margin: 0rem;
   }
 
   body>.nav{
-
-    font-size: 3rem;
-    line-height: 3.2rem;
+    width: 100%;
+    font-size: 1.5em;
+    line-height: 1.7em;
   }
 
-  body>.header{
-    margin: 1rem 0rem 1rem 0rem;
+  body>.header p{
+    font-size: 0.7em;
+    line-height: 0.9em;
   }
 
-  .button{
-    padding: 1rem 2.5rem;
-  }
-  .clicked, .button:hover {
-    border-bottom: 0.5rem solid #a9aaa5;
-    cursor: pointer;
-  }
+
+
 }
