@@ -26,8 +26,14 @@ The navigation bar appears at the top. You may edit the `index.html` to fit it a
 
 ```
 <div class="nav">
-    <div class="button" onclick="setPage('partial/aboutme.html',0)">About Me</div>
-    <div class="button" onclick="setPage('partial/cv.html',1)">CV</div>
+    <div class="name">Your name here</div>
+    <div id="myLinks">
+        <div class="button" onclick="setPage('partial/aboutme.html',0)">About Me</div>
+        <div class="button" onclick="setPage('partial/cv.html',1)">CV</div>
+    </div>
+    <a href="javascript:void(0);" class="menu-icon" onclick="onClickMenu()">
+        <i class="fa fa-bars"></i>
+    </a>
 </div>
 ```
 
@@ -243,3 +249,16 @@ This renders a list where then you can add `list-item`'s in.
 ```
 
 
+# To develop compile
+
+```
+sass css/index.scss css/sublime.monokai.css
+
+```
+
+Or
+
+```
+sass --watch css/index.scss css/sublime.monokai.css
+
+``
