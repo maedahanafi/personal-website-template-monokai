@@ -1,0 +1,43 @@
+
+/********************************** Paddings, Margins, Spacings **********************************/
+
+$padding: 16px;
+
+/********************************** Web Layouts  **********************************/
+
+@mixin body-layout() {
+  display: grid;
+  height: 100%;
+  grid-template-columns: minmax(5%,30px) minmax(500px, auto) 5%;
+  grid-template-rows: minmax(8%,max-content) max-content auto;
+  grid-template-areas:
+    ". nav ."
+    ". header ."
+    ". main .";
+}
+
+@mixin header(){
+	grid-area: header;
+}
+
+@mixin nav(){
+  grid-area: nav;
+}
+
+@mixin main(){
+  grid-area: main;
+}
+
+/********************************** Mobile Layouts  **********************************/
+
+@mixin body-layout-mobile() {
+  display: grid;
+  /*row-gap: 2em;*/
+  row-gap: $padding;
+  grid-template-columns: $padding auto $padding;
+  /*grid-template-rows: auto auto auto;*/
+  grid-template-areas:
+    ". nav ."
+    ". header ."
+    ". main .";
+}

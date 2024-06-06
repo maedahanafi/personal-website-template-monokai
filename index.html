@@ -5,13 +5,15 @@
 	<title> Add a title here! </title>
 
 	<link rel="stylesheet" type="text/css" href="css/jquery.jscrollpane.css" />
-	<link rel="stylesheet" type="text/css" href="css/sublime.monokai.css"/>
+	<link rel="stylesheet" type="text/css" href="css/output.css"/>
 
 	<!-- SPELLS -->
 	<script src='js/library/jquery-2.1.0.min.js'></script>
 
 	<!-- Main controller files -->
     <script src='js/controller/page_controller.js'></script>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 
@@ -20,11 +22,26 @@ $(document).ready(function(){
     setPage("partial/cv.html",1);
 });
 
+function onClickMenu() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+
 </script>
 <body >
 	<div class="nav">
-		<div class="button" onclick="setPage('partial/aboutme.html',0)">About Me</div>
-		<div class="button" onclick="setPage('partial/cv.html',1)">CV</div>
+		<div class="name">Your name here</div>
+		<div id="myLinks">
+			<div class="button" onclick="setPage('partial/aboutme.html',0)">About Me</div>
+			<div class="button" onclick="setPage('partial/cv.html',1)">CV</div>
+		</div>
+		<a href="javascript:void(0);" class="menu-icon" onclick="onClickMenu()">
+			<i class="fa fa-bars"></i>
+		</a>
 	</div>
 
 	<div class="header">
@@ -32,7 +49,7 @@ $(document).ready(function(){
 		<div class="tabbed">
 			<p class="content-text">NYC, USA // San Jose, USA</p>
 			<p class="content-text">your.email@email.com</p>
-			<p class="content-text"><a href="https://github.com/theTrueCaptian/">My Github</a> // <a href="https://maeda-han.medium.com/">My Medium Articles</a></p>
+			<p class="content-text"><a href="https://github.com/maedahanafi/">My Github</a> // <a href="https://maeda-han.medium.com/">My Medium Articles</a></p>
 
 		</div>
 	</div>

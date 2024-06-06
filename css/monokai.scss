@@ -1,0 +1,91 @@
+
+/********************************** Font face **********************************/
+@font-face {
+  font-family: IBMPlexMono;
+  src: url(./IBMPlexMono-Regular.ttf);
+}
+@font-face {
+  font-family: IBMPlexMonoBold;
+  src: url(./IBMPlexMono-SemiBold.ttf);
+}
+
+/********************************** Color Variables **********************************/
+
+/* blacks*/
+$black-bg: #232420;
+
+/* grays */
+$dark-gray-bg: #2f302b;
+$light-gray: #a9aaa5;
+
+
+/* pinks */
+$hot-pink: #eb296c;
+
+/* whites */
+$white: #ffffff;
+
+/* green */
+$bright-green: #a3d83e;
+
+/* yellow */
+$yellow: #e2da78;
+
+/* purple */
+$purple: #a486df;
+
+/* blue */
+$light-blue: #64d6ee;
+
+/********************************** Font **********************************/
+
+$font-stack: IBMPlexMono;
+$font-stack-bold: IBMPlexMonoBold;
+
+@mixin main-font() {
+  font-size: 1em;
+  /*line-height:1.5em;*/
+  font-family: $font-stack;
+  color: $white;
+  font-weight: normal;
+}
+
+@mixin nav-font() {
+  font-size: 1em;
+  font-family: $font-stack;
+  color: $white;
+  font-weight: normal;
+}
+
+@mixin title-font() {
+  font-size: 2em;
+  /*line-height: 3em;*/
+  font-family: $font-stack-bold;
+  color: $hot-pink;
+}
+
+
+
+/********************************** Mixins **********************************/
+
+
+@mixin button() {
+  background-color: $dark-gray-bg;
+  color: $light-gray;
+}
+
+@mixin nav() {
+  @include nav-font();
+
+  background-color:  $dark-gray-bg;
+  color: $light-gray;
+  border-bottom: 1px solid $light-gray;
+
+}
+
+@mixin body() {
+  @include main-font();
+  background-color: $dark-gray-bg;
+
+}
+
