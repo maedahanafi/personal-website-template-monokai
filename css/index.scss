@@ -5,7 +5,13 @@
 /********************************** Paddings, Margins, Spacings **********************************/
 
 $padding: 16px;
-$padding-mobile: 2em;
+$padding-double: 32px;
+$padding-mobile: 32px;
+
+/********************************** Font sizes **********************************/
+
+$font-size: 16px;
+$large-font-size: 28px;
 
 /********************************** Body layout and body components **********************************/
 
@@ -45,12 +51,11 @@ body {
 /* Mobile phone screens */
 @media only screen and (max-device-width: 450px) {
   html{
-    font-size: 1.5em;
+    /*font-size: 1.5em;*/
   }
 
   body {
     @include layout.body-layout-mobile();
-    /*@include theme.body();*/
   }
 }
 
@@ -66,7 +71,10 @@ body {
 /********************************** Components: Name **********************************/
 
 .header .name{
-  @include theme.title-font();
+  font-size: $large-font-size;
+  padding-bottom: $padding;
+  font-family: theme.$font-stack-bold;
+  color: theme.$hot-pink;
 }
 
 /********************************** Components: Paragraph **********************************/
@@ -109,8 +117,8 @@ a{
   >.name{
     font-family: theme.$font-stack-bold;
     color: theme.$hot-pink;
-    padding: 16px;
-    padding-right: 32px;
+    padding: $padding;
+    padding-right: $padding-double;
   }
 
   .button{
@@ -167,6 +175,13 @@ p{
   padding: $padding 0;
 }
 
+@media only screen and (max-device-width: 450px) {
+
+  .paragraph{
+    padding: $padding-mobile;
+  }
+}
+
 /********************************** Colored texts  **********************************/
 
 .highlight{
@@ -192,6 +207,7 @@ p{
   border-radius: 1em;
 
   .resume-col-header{
+    font-size: $large-font-size;
     font-family: theme.$font-stack-bold;
     color: theme.$hot-pink;
     padding: $padding 0;
@@ -283,6 +299,14 @@ p{
 }
 
 
+
+@media only screen and (max-device-width: 450px) {
+
+  .content-text-box{
+    padding: $padding-mobile;
+  }
+}
+
 /********************************* List **************************************************************************************************/
 /* list --> this contains a compact ist of list-items and publication-items
    list-items contains
@@ -365,3 +389,15 @@ p{
   }
 }
 
+
+@media only screen and (max-device-width: 450px) {
+
+  .list{
+    >.list-item{
+      padding: $padding-mobile;
+    }
+    >.publication-item{
+      padding: $padding-mobile;
+    }
+  }
+}

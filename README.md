@@ -249,7 +249,7 @@ This renders a list where then you can add `list-item`'s in.
 ```
 
 
-# To develop compile
+# To develop and compile the sass file to css
 
 ```
 sass css/index.scss css/sublime.monokai.css

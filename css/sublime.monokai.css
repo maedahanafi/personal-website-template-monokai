@@ -23,6 +23,7 @@
 /********************************** Mobile Layouts  **********************************/
 /********************************** Nav **********************************/
 /********************************** Paddings, Margins, Spacings **********************************/
+/********************************** Font sizes **********************************/
 /********************************** Body layout and body components **********************************/
 body {
   display: grid;
@@ -30,7 +31,7 @@ body {
   grid-template-columns: minmax(5%, 30px) minmax(500px, auto) 5%;
   grid-template-rows: minmax(8%, max-content) max-content auto;
   grid-template-areas: ". nav ." ". header ." ". main .";
-  font-size: 1em;
+  /*font-size: 1em;*/
   /*line-height:1.5em;*/
   font-family: IBMPlexMono;
   color: #ffffff;
@@ -43,7 +44,7 @@ body > .header {
 }
 body .nav {
   grid-area: nav;
-  font-size: 1em;
+  /*font-size: 1em;*/
   font-family: IBMPlexMono;
   color: #ffffff;
   font-weight: normal;
@@ -71,7 +72,7 @@ body .main {
 /* Mobile phone screens */
 @media only screen and (max-device-width: 450px) {
   html {
-    font-size: 1.5em;
+    /*font-size: 1.5em;*/
   }
   body {
     display: grid;
@@ -80,7 +81,6 @@ body .main {
     grid-template-columns: 16px auto 16px;
     /*grid-template-rows: auto auto auto;*/
     grid-template-areas: ". nav ." ". header ." ". main .";
-    /*@include theme.body();*/
   }
 }
 /* Tablet screens */
@@ -91,8 +91,8 @@ body .main {
 }
 /********************************** Components: Name **********************************/
 .header .name {
-  font-size: 2em;
-  /*line-height: 3em;*/
+  font-size: 28px;
+  padding-bottom: 16px;
   font-family: IBMPlexMonoBold;
   color: #eb296c;
 }
@@ -179,6 +179,11 @@ p {
   padding: 16px 0;
 }
 
+@media only screen and (max-device-width: 450px) {
+  .paragraph {
+    padding: 32px;
+  }
+}
 /********************************** Colored texts  **********************************/
 .highlight {
   color: #a3d83e;
@@ -201,6 +206,7 @@ p {
   border-radius: 1em;
 }
 .resume-row .resume-col-header {
+  font-size: 28px;
   font-family: IBMPlexMonoBold;
   color: #eb296c;
   padding: 16px 0;
@@ -213,8 +219,8 @@ p {
 
 @media only screen and (max-device-width: 450px) {
   .resume-row {
-    padding: 2em;
-    margin: 2em 0;
+    padding: 32px;
+    margin: 32px 0;
   }
 }
 /********************************** Content box  **********************************/
@@ -266,6 +272,11 @@ p {
   .content-text-box > .date {
     grid-area: date;
     text-align: left;
+  }
+}
+@media only screen and (max-device-width: 450px) {
+  .content-text-box {
+    padding: 32px;
   }
 }
 /********************************* List **************************************************************************************************/
@@ -336,6 +347,15 @@ p {
 }
 .list > .tabbed {
   padding-left: 16px;
+}
+
+@media only screen and (max-device-width: 450px) {
+  .list > .list-item {
+    padding: 32px;
+  }
+  .list > .publication-item {
+    padding: 32px;
+  }
 }
 
 /*# sourceMappingURL=sublime.monokai.css.map */
