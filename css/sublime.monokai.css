@@ -71,9 +71,6 @@ body .main {
 
 /* Mobile phone screens */
 @media only screen and (max-device-width: 450px) {
-  html {
-    /*font-size: 1.5em;*/
-  }
   body {
     display: grid;
     /*row-gap: 2em;*/
@@ -82,11 +79,15 @@ body .main {
     /*grid-template-rows: auto auto auto;*/
     grid-template-areas: ". nav ." ". header ." ". main .";
   }
+  body > .header {
+    margin-top: 100px;
+  }
 }
 /* Tablet screens */
 /********************************** Components: Name **********************************/
 .header .name {
-  font-size: 28px;
+  font-size: 32px;
+  padding-top: 16px;
   padding-bottom: 16px;
   font-family: IBMPlexMonoBold;
   color: #eb296c;
@@ -115,6 +116,54 @@ body .main {
     top: 0;
   }
 }
+/********************************** Components: info card and its icon **********************************/
+.info-card {
+  padding: 32px;
+  display: flex;
+  column-gap: 32px;
+}
+.info-card i {
+  color: #ffffff;
+  margin-right: 16px;
+  padding: 0.5em 0.5em;
+  text-decoration: none;
+  background: #2f302b;
+  position: relative;
+  right: 0;
+  top: 0;
+  font-size: 18px;
+  height: 18px;
+  width: 18px;
+  border-radius: 5px;
+  border: 0.5px solid #a9aaa5;
+}
+.info-card .fa-code {
+  font-size: 17px;
+}
+.info-card p {
+  padding: 2px 0px;
+}
+
+@media only screen and (max-device-width: 768px) {
+  .info-card {
+    display: block;
+  }
+}
+@media only screen and (max-device-width: 450px) {
+  .info-card {
+    display: block;
+  }
+  .info-card i {
+    margin-right: 16px;
+    padding: 16px;
+    font-size: 12px;
+    height: 32px;
+    width: 32px;
+  }
+  .info-card .fa-code {
+    font-size: 12px;
+  }
+}
 /********************************** URLs **********************************/
 a {
   color: #64d6ee;
@@ -123,6 +172,9 @@ a {
 }
 
 /********************************** Components: Nav links **********************************/
+.nav {
+  z-index: 100;
+}
 .nav > .name {
   font-family: IBMPlexMonoBold;
   color: #eb296c;
@@ -146,12 +198,11 @@ a {
   body .nav {
     display: block;
     font-size: 2em;
-    /*height: 2.5em;*/
   }
   body .nav > .name {
     font-size: 2em;
     line-height: 2.5em;
-    padding-left: 16px;
+    padding-left: 32px;
   }
   body .nav #myLinks {
     display: none;
@@ -203,7 +254,7 @@ p {
   border-radius: 1em;
 }
 .resume-row .resume-col-header {
-  font-size: 28px;
+  font-size: 32px;
   font-family: IBMPlexMonoBold;
   color: #eb296c;
   padding: 16px 0;

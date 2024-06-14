@@ -11,7 +11,7 @@ $padding-mobile: 32px;
 /********************************** Font sizes **********************************/
 
 $font-size: 16px;
-$large-font-size: 28px;
+$large-font-size: 32px;
 $large-font-size-mobile: 2em;
 
 /********************************** Body layout and body components **********************************/
@@ -52,11 +52,13 @@ body {
 /* Mobile phone screens */
 @media only screen and (max-device-width: 450px) {
   html{
-    /*font-size: 1.5em;*/
   }
 
   body {
     @include layout.body-layout-mobile();
+    > .header{
+      margin-top: 100px;
+    }
   }
 }
 
@@ -72,6 +74,7 @@ body {
 
 .header .name{
   font-size: $large-font-size;
+  padding-top: $padding;
   padding-bottom: $padding;
   font-family: theme.$font-stack-bold;
   color: theme.$hot-pink;
@@ -103,6 +106,64 @@ body {
   }
 
 }
+/********************************** Components: info card and its icon **********************************/
+
+
+.info-card{
+  padding: $padding-double;
+    display: flex;
+    column-gap: $padding-double;
+  i{
+    color: theme.$white;
+    margin-right: $padding;
+    padding: 0.5em 0.5em;
+    text-decoration: none;
+    background: theme.$dark-gray-bg;
+    position: relative;
+    right: 0;
+    top: 0;
+
+    font-size: 18px;
+    height: 18px;
+    width: 18px;
+    border-radius:5px;
+
+    border: 0.5px solid theme.$light-gray;
+
+  }
+
+  .fa-code {
+    font-size:17px;
+  }
+
+  p{
+    padding: 2px 0px;
+  }
+}
+@media only screen and (max-device-width: 768px) {
+  .info-card {
+    display: block;
+  }
+}
+@media only screen and (max-device-width: 450px) {
+
+  .info-card {
+    display: block;
+    i{
+      margin-right: 16px;
+      padding: 16px;
+      font-size: 12px;
+      height: 32px;
+      width: 32px;
+    }
+
+    .fa-code {
+      font-size: 12px;
+    }
+  }
+
+}
+
 
 /********************************** URLs **********************************/
 
@@ -114,6 +175,7 @@ a{
 
 /********************************** Components: Nav links **********************************/
 .nav{
+  z-index: 100;
   >.name{
     font-family: theme.$font-stack-bold;
     color: theme.$hot-pink;
@@ -142,12 +204,11 @@ a{
     .nav{
       display: block;
       font-size: $large-font-size-mobile;
-      /*height: 2.5em;*/
 
       >.name{
         font-size: $large-font-size-mobile;
         line-height: 2.5em;
-        padding-left: $padding;
+        padding-left: $padding-mobile;
       }
       #myLinks{
         display: none;
